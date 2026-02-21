@@ -3,18 +3,18 @@ function showSurprise() {
 }
 
 function sayYes() {
-    document.getElementById("photo-popup").classList.remove("hidden");
+    document.getElementById("photo-popup").style.display = "flex";
 }
 
 function closePopup() {
-    document.getElementById("photo-popup").classList.add("hidden");
+    document.getElementById("photo-popup").style.display = "none";
 }
 
 // Make NO button run away
 const noBtn = document.getElementById("noBtn");
 
 noBtn.addEventListener("mouseover", function() {
-    const randomX = Math.floor(Math.random() * 300) - 150;
-    const randomY = Math.floor(Math.random() * 200) - 100;
-    noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    const x = Math.floor(Math.random() * 300) - 150;
+    const y = Math.floor(Math.random() * 200) - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
 });
