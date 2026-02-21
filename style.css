@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #ff4e9b, #ffb6c1, #ff69b4, #ff1493);
+    background-size: 400% 400%;
+    animation: bgAnimation 10s ease infinite;
+    color: white;
+}
+
+@keyframes bgAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.title {
+    margin-top: 40px;
+    font-size: 40px;
+}
+
+.cake {
+    position: relative;
+    margin: 40px auto;
+    width: 200px;
+}
+
+.layer {
+    height: 40px;
+    border-radius: 10px;
+    margin: 5px 0;
+}
+
+.top { background: #ff9ecf; }
+.middle { background: #ff69b4; }
+.bottom { background: #ff1493; }
+
+.candle {
+    width: 10px;
+    height: 40px;
+    background: white;
+    margin: 0 auto;
+    position: relative;
+}
+
+.flame {
+    width: 15px;
+    height: 15px;
+    background: gold;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: -2px;
+    animation: flicker 0.2s infinite alternate;
+}
+
+@keyframes flicker {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(1.2); opacity: 0.8; }
+}
+
+.surprise-btn, .yes-btn, .no-btn {
+    padding: 12px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.surprise-btn {
+    background: gold;
+}
+
+.yes-btn {
+    background: #00ff7f;
+}
+
+.no-btn {
+    background: red;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+}
